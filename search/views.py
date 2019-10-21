@@ -13,7 +13,7 @@ def search(request):
     if search_query:
         search_results = Page.objects.live().search(search_query)
         query = Query.get(search_query)
-
+        raise Exception('Error in Wagtail')
         # Record hit
         query.add_hit()
     else:
